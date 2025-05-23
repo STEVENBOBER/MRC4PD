@@ -1,0 +1,55 @@
+name: MRC4 Notifier
+
+on:
+  schedule:
+    - cron: "0 15 * * 1" # Every Monday at 7 AM Pacific
+  workflow_dispatch:
+    inputs:
+      test_mode:
+        description: "Run in test mode (no Signal messages sent)"
+        required: false
+        default: "false"
+
+jobs:
+  run-mrc4:
+    runs-on: ubuntu-latest
+
+    # Apply all secrets & inputs here to avoid step-level bugs
+    env:
+      MRC4_PATH: ${{ secrets.MRC4_PATH }}
+      SIGNAL_CLI_PATH: ${{ secrets.SIGNAL_CLI_PATH }}
+      SIGNAL_NUMBER: ${{ secrets.SIGNAL_NUMBER }}
+      GROUP_ID: ${{ secrets.GROUP_ID }}
+      ALERT_NUMBER: ${{ secrets.ALERT_NUMBER }}
+      MRC4_SHEET: ${{ secrets.MRC4_SHEET }}
+      TEST_MODE: ${{ github.event.inputs.test_mode }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Debug MRC4_PATH and Signal CLI Path
+        run: |
+          echo "MRC4_PATH: [$MRC4_PATH]"
+          echo "SIGNAL_CLI_PATH: [$SIGNAL_CLI_PATH]"
+          echo "Current directory: $(pwd)"
+          echo "Repo contents:"
+          ls -la
+          echo "Contents of data/:"
+          ls -la data || echo "data/ folder not found"
+          echo "Check if Excel file exists:"
+          ls -l "$MRC4_PATH" || echo "❌ File does NOT exist at path: $MRC4_PATH"
+
+      - name: Run MRC4 Notifier
+        run: |
+          python src/main.py
