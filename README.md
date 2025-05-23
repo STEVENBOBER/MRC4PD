@@ -58,7 +58,11 @@ pip install -r requirements.txt
    MRC4_SHEET=             # sheet name (default: MRC4)
    TEST_MODE=true          # safe preview mode (no real sends)
    ```
+3. Learn how to install install Signal CLI through documentation(it's well worth a read):
 
+   ```
+   https://github.com/AsamK/signal-cli
+   ```
 ---
 
 ## Running the Notifier
