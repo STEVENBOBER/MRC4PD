@@ -1,0 +1,19 @@
+
+2025-05-22 20:51:48,003 - INFO - == New MRC4 notifier job run ==
+2025-05-22 20:51:48,003 - INFO - MRC4_PATH from env: /Users/stevenbober/Desktop/code/MRC4PD/data/MRC4_TEST.xlsx
+2025-05-22 20:51:48,003 - INFO - Working directory: /Users/stevenbober/Desktop/code/MRC4PD/src
+2025-05-22 20:51:48,003 - INFO - Resolved file path: /Users/stevenbober/Desktop/code/MRC4PD/data/MRC4_TEST.xlsx
+2025-05-22 20:51:48,075 - INFO - Available sheets in MRC4_TEST.xlsx: ['MRC4']
+2025-05-22 20:51:48,075 - WARNING - ⚠️ Requested sheet 'MRC4            # Sheet name (default is "MRC4")' not found. Defaulting to first sheet 'MRC4'.
+2025-05-22 20:51:48,079 - INFO - Loaded Excel data from /Users/stevenbober/Desktop/code/MRC4PD/data/MRC4_TEST.xlsx (sheet: MRC4)
+2025-05-22 20:51:48,080 - INFO - Message composed.
+2025-05-22 20:51:52,246 - INFO - Signal message sent
+2025-05-22 20:52:18,197 - INFO - == New MRC4 notifier job run ==
+2025-05-22 20:52:18,197 - INFO - MRC4_PATH from env: /Users/stevenbober/Desktop/code/MRC4PD/data/MRC4_TEST.xlsx
+2025-05-22 20:52:18,197 - INFO - Working directory: /Users/stevenbober/Desktop/code/MRC4PD/src
+2025-05-22 20:52:18,197 - INFO - Resolved file path: /Users/stevenbober/Desktop/code/MRC4PD/data/MRC4_TEST.xlsx
+2025-05-22 20:52:18,263 - INFO - Available sheets in MRC4_TEST.xlsx: ['MRC4']
+2025-05-22 20:52:18,263 - WARNING - ⚠️ Requested sheet 'MRC4            # Sheet name (default is "MRC4")' not found. Defaulting to first sheet 'MRC4'.
+2025-05-22 20:52:18,267 - INFO - Loaded Excel data from /Users/stevenbober/Desktop/code/MRC4PD/data/MRC4_TEST.xlsx (sheet: MRC4)
+2025-05-22 20:52:18,267 - INFO - Message composed.
+2025-05-22 20:52:21,399 - INFO - Signal message sent
