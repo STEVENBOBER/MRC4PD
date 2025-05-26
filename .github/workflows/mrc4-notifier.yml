@@ -8,7 +8,7 @@ on:
       test_mode:
         description: "Run in test mode (no Signal messages sent)"
         required: false
-        default: "false"
+        default: "true"
 
 jobs:
   run-mrc4:
